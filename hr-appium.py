@@ -11,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.alert import Alert
-
+#rưee
 # Connect to Appium with the below desire capabilities
 # http://appium.io/docs/en/writing-running-appium/caps/
 dc = {
