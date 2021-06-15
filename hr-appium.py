@@ -26,7 +26,6 @@ dc = {
     "language": "en"
 }
 
-with open("E:\\Quynh\\Selenium\\Appium-Python\\HR-app\\config-10.json") as json_data_file:
     data = json.load(json_data_file)
 
 n = random.randint(1,3000)
@@ -171,7 +170,6 @@ def clock_in_GPS():
         except WebDriverException:
             print("=> IN - OUT not display")   
 
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["calendar"]))).click()
         # WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//android.view.ViewGroup[@index='1']//android.widget.Button[@index=16]"))).click()
         # print("- Select date")
         # WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["select"]))).click()
@@ -731,6 +729,62 @@ def clock_out_Beacon():
         print("=> Already clock out") 
     time.sleep(5)
 
+def settings():
+    print(" ")
+    print("** Settings app **")
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["settings_button"]))).click()
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["language"]))).click()
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["한국어"]))).click()
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["close"]))).click()
+    korean = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["language_text"])))
+    if korean.text == '한국어':
+        print("=> Change language success")
+    else:
+        print("=> Fail")
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["VN"]))).click()
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["close"]))).click()
+    VN_text = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["language_text"])))
+    if VN_text.text == 'Tiếng Việt':
+        print("=> Change language success")
+    else:
+        print("=> Fail")
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["日本語"]))).click()
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["close"]))).click()
+    TQ = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["language_text"])))
+    if TQ.text == '日本語':
+        print("=> Change language success")
+    else:
+        print("=> Fail")
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["简体中文"]))).click()
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["close"]))).click()
+    JP = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["language_text"])))
+    if JP.text == '简体中文':
+        print("=> Change language success")
+    else:
+        print("=> Fail")
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["Indonesian"]))).click()
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["close"]))).click()
+    indo = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["language_text"])))
+    if indo.text == 'Indonesian':
+        print("=> Change language success")
+    else:
+        print("=> Fail")
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["english"]))).click()
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["close"]))).click()
+    EN = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["settings"]["language_text"])))
+    if EN.text == 'English':
+        print("=> Change language success")
+    else:
+        print("=> Fail")
+
+    
+    
 '''
 - Check crash app of timecard
 => when click to menu but don't display data, it'll show result crash app
@@ -740,6 +794,7 @@ def timecard():
     print("** Check crash app **")
     print("- Timesheet - Daily -")
     driver.find_element_by_xpath(data["event"]["timecard"]).click()
+    time.sleep(5)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["timesheet"]))).click()
 
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timesheet_daily"]["next"]))).click()
@@ -880,42 +935,74 @@ def timecard():
     driver.find_element_by_xpath(data["event"]["timecard"]).click()
 
     print("** Check report - Monthly")
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["MT_report"]))).click()
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_monthly"]["MT_report"]))).click()
     print("- Schedule Working")
-    time.sleep(5)
+    time.sleep(10)
 
-    schedule = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["schedule_working"])))
+    schedule = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_monthly"]["schedule_working"])))
     if schedule.text == 'Scheduled working day':
-        count_day = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["count_schedule_working"])))
+        count_day = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_monthly"]["count_schedule_working"])))
         print("- Scheduled working day:", count_day.text)
     else:
         print("=> Crash app")
         exit(0)
     time.sleep(5)
 
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["events"]))).click()
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_monthly"]["events"]))).click()
     print("- Events")
     time.sleep(5)
-    clock_in = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["clockin"])))
+    clock_in = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_monthly"]["clockin"])))
     if clock_in.text == 'Clock-In':
-        count_clock_in = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["count_clockin"])))
+        count_clock_in = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_monthly"]["count_clockin"])))
         print("- Events - Clock in:", count_clock_in.text)
     else:
         print("=> Crash app")
         exit(0)
     time.sleep(5)
 
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["working_status"]))).click()
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_monthly"]["working_status"]))).click()
     print("- Working status")
     time.sleep(5)
-    working_time = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["workingtime"])))
+    working_time = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_monthly"]["workingtime"])))
     if working_time.text == 'Working time':
-        count_working_time = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["count_workingtime"])))
+        count_working_time = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_monthly"]["count_workingtime"])))
         print("- Working status - Working time:", count_working_time.text)
     else:
         print("=> Crash app")
         exit(0)
     time.sleep(5)
+
+    print("** Check report - Weekly")
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_weekly"]["weekly"]))).click()
+    print("- View week tab")
+    time.sleep(10)
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_weekly"]["device"]))).click()
+    print("- View tab device")
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_weekly"]["Avg_Working"]))).click()
+    print("- View tab Avg_Working")
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_weekly"]["working_hour"]))).click()
+    print("- View tab working hour")
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_weekly"]["next"]))).click()
+    print("- View next month")
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_weekly"]["prev"]))).click()
+    print("- View preview month")
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_weekly"]["calendar"]))).click()
+    print("- Select calendar")
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//android.view.ViewGroup[@index='1']//android.widget.Button[@index=9]"))).click()
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report_weekly"]["selectdate"]))).click()
+    print("- Select date")
+
+
+
+
+
 
 
     '''
