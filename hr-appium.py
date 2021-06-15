@@ -26,6 +26,7 @@ dc = {
     "language": "en"
 }
 
+with open("E:\\Quynh\\Selenium\\Appium-Python\\HR-app\\config-10.json") as json_data_file:
     data = json.load(json_data_file)
 
 n = random.randint(1,3000)
@@ -170,6 +171,7 @@ def clock_in_GPS():
         except WebDriverException:
             print("=> IN - OUT not display")   
 
+        # WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["calendar"]))).click()
         # WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//android.view.ViewGroup[@index='1']//android.widget.Button[@index=16]"))).click()
         # print("- Select date")
         # WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["select"]))).click()
