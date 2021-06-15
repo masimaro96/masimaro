@@ -29,7 +29,12 @@
         "OUT": "//androidx.viewpager.widget.ViewPager//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']/android.widget.TextView[@text='Out']",
         "select_branch": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']//android.widget.ScrollView[@index='1']//android.view.ViewGroup[@index='0']//android.widget.TextView[@index=0]",
 
-        "close_popup": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Close']"
+        "close_popup": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Close']",
+        
+        "preview": "//android.widget.ScrollView[@index='0']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='0']//android.widget.TextView[@index=0]",
+        "next": "//android.widget.ScrollView[@index='0']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='2']//android.widget.TextView[@index=0]",
+        "calendar": "//android.widget.ScrollView[@index='0']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.widget.TextView[@index=0]",
+        "select": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index='1']//android.widget.TextView[@text='Select']"
     },
 
     "OT":{
@@ -60,7 +65,7 @@
   
         "GPS_settings":{
             "back": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup",
-            "add_gps": "//android.view.ViewGroup[@index='3']//android.widget.Button[@index='1']//android.widget.Button[@index='2']/android.widget.TextView[@index=0]",
+            "add_gps": "//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='2']/android.widget.TextView[@index=0]",
             "popup": "//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Yes']",
 
             "button_save": "//*[contains(@text,'Save')]",
@@ -68,10 +73,10 @@
             "search": "//*[contains(@text,'Please input a address')]",
             "search_text": "400 nguyen thi thap",
 
-            "list": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup",
+            "list": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=1]",
             "search_input": "//android.view.ViewGroup[@index='1']//android.widget.TextView[@text='400 Nguyễn Thị Thập, Tân Quy, District 7, Ho Chi Minh City, Vietnam']",
-            "location": "//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='2']//android.widget.EditText[@index='1']",
-            "location_text": "hanbiro_auto ",
+            "location": "//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='2']//android.widget.EditText[@index=1]",
+            "location_text": "hr-GPS ",
             "workPlace": "//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index=4]",
             "workPlace_input": "//*[contains(@text,'Vietnam Office')]",
             "close_save": "//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Close']",
@@ -83,20 +88,18 @@
         }, 
         
         "WIFI_settings":{
-            "wifi": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]",
-           
-            "add_wifi": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[3]",
-            "wifi_name": "//*[contains(@text,'Hanbiro-QA-FPT')]",
+            "add_wifi": "//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='2']/android.widget.TextView[@index=0]",
+            "wifi_name": "//*[contains(@text,'JS VINA')]",
             "button_next":[
-                "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup",
-                "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[3]"
+                "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']//android.widget.TextView[@text='Next']",
+                "//android.view.ViewGroup[@index='2']//android.widget.TextView[@text='Next']"
             ],
-            "workPlace": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.view.ViewGroup[2]",
+            "workPlace": "//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index=4]",
             "workPlace_input": "//*[contains(@text,'Vietnam Office')]",
-            "close_popup": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup",
-            "complete": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]",
-            
-            "delete": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup",
+            "close_popup": "//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Close']",
+            "complete": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']//android.widget.TextView[@text='Complete']",
+
+            "delete": "//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='0']//android.widget.TextView[@text='Delete']",
             
             "wifi_text": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.TextView[1]",
             "": ""
@@ -104,26 +107,24 @@
         },
 
         "BEACON_settings":{
-            "beacon": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]",
-            "": ""
+            "edit": "//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='1']//android.widget.TextView[@index=0]",
+            "edit_name": "//android.view.ViewGroup[@index='2']//android.widget.EditText[@index=1]",
+            "name": "Hanbiro VN "
         }
         
     },
     "clock_out": {
-        "icon_clock_out_button": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='2']/android.widget.ImageView",
-        "icon_clockout": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]",
+        "icon_clock_out_button": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='1']/android.widget.ImageView",
+        
         "popup": "//android.view.ViewGroup[@index='0']//android.widget.TextView[@text='Leave Early']",
-        "input_text": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText",
-        "status_text": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[4]/android.widget.TextView[2]",
-        "close_popup": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]",
+        "close_popup": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='4']/android.widget.TextView[@text='Close']",
         "": ""
-    
-    
     },
     
     "view_noti":{
         "noti": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='3']/android.widget.TextView[@index=0]",
-        "back_homepage": "//android.view.ViewGroup[@index='0']/android.widget.ImageView"
+        "back_homepage": "//android.view.ViewGroup[@index='0']/android.widget.ImageView",
+        "": ""
     },
 
     "event":{
@@ -147,8 +148,70 @@
         "close_popup": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Close']"
     },
     "TimeCard":{
-        "title": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView",
-        "MT_report": "//android.view.ViewGroup[@index='2']//android.widget.TextView[@text='Report']",
+        "timesheet_daily":{
+            "next": "//android.view.ViewGroup[@index='0']//androidx.viewpager.widget.ViewPager[@index='1']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=2]",
+            "prev": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=0]",
+            "calendar": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=1]",
+            "select_date": "//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='Select']",
+            
+            "policy": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='1']//android.widget.TextView[@text='Work Policy']",
+            "date": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']/android.widget.TextView[@index=0]"
+        },
+
+        "timesheet_list":{
+            "list": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']//android.widget.TextView[@text='LIST']",
+
+            "next": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index=2]",
+            "prev": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index=0]",
+            "calendar": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=1]",
+            "select_date": "//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='Select']",
+
+            "sort": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']/android.view.ViewGroup[@index=0]",
+            "list_sort": "//android.view.ViewGroup[@index='0']//android.widget.ScrollView[@index=0]",
+
+            "week_1": "//android.view.ViewGroup[@index='0']//android.widget.TextView[@text='1st Week']",
+            "week_2": "//android.view.ViewGroup[@index='1']//android.widget.TextView[@text='2nd Week']",
+            "week_3": "//android.view.ViewGroup[@index='2']//android.widget.TextView[@text='3rd Week']",
+            "week_4": "//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='4th Week']",
+            "week_5": "//android.view.ViewGroup[@index='4']//android.widget.TextView[@text='5th Week']",
+
+            "week_2_text": "//androidx.viewpager.widget.ViewPager[@index='1']//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='4']/android.view.ViewGroup[@index='0']/android.view.ViewGroup[@index='0']/android.widget.TextView[@text='TOTAL OF 2ND WEEK']",
+            "week_3_text": "//androidx.viewpager.widget.ViewPager[@index='1']//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='4']//android.view.ViewGroup[@index='0']//android.widget.TextView[@text='TOTAL OF 3RD WEEK']",
+            "week_4_text": "//androidx.viewpager.widget.ViewPager[@index='1']//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='4']//android.view.ViewGroup[@index='0']//android.widget.TextView[@text='TOTAL OF 4TH WEEK']",
+            "week_5_text": "//androidx.viewpager.widget.ViewPager[@index='1']//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='4']//android.view.ViewGroup[@index='0']//android.widget.TextView[@text='TOTAL OF 5TH WEEK']",
+            "": ""
+        },
+
+        "timesheet_calendar":{
+            "calendar": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']//android.widget.TextView[@text='CALENDAR']",
+            "next": "//android.view.ViewGroup[@index='0']//androidx.viewpager.widget.ViewPager[@index='1']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=2]",
+            "prev": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=0]",
+            "calendar_select": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=1]",
+            "select_date": "//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='Select']",
+            "": ""
+        },
+
+        "title": "",
+
+        "report":{
+            "MT_report": "//android.view.ViewGroup[@index='2']//android.widget.TextView[@text='Report']",
+            "schedule_working": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Scheduled working day']",
+            "count_schedule_working": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.widget.TextView[@index=0]",
+            
+            "events": "//android.view.ViewGroup[@index='0']//android.widget.HorizontalScrollView[@index='1']//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='Events']",
+            "clockin": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']/android.widget.TextView[@text='Clock-In']",
+            "count_clockin": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index='1']/android.widget.TextView[@index=0]",
+            
+            "working_status": "//android.view.ViewGroup[@index='0']//android.widget.HorizontalScrollView[@index='1']//android.view.ViewGroup[@index='2']/android.widget.TextView[@text='Working status']",
+            "workingtime": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']/android.widget.TextView[@text='Working time']",
+            "count_workingtime": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index='1']/android.widget.TextView[@index=0]",
+            "": "",
+            "": "",
+            "": "",
+            "": ""
+        },
+        
+        
         "MT_report_title": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView",
         "report_monthly_text": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView",
 
