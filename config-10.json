@@ -244,7 +244,29 @@
         },
 
         "weekly_status":{
-            "weekly_status_CT": "//android.view.ViewGroup[@index='5']//android.widget.TextView[@text='Week Status']"
+            "weekly_status_CT": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='5']//android.widget.TextView[@text='Weekly Status']",
+            "sort_week": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.widget.TextView[@text='1st Week']",
+            "list": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index=0]",
+
+            "week_1": "//android.view.ViewGroup[@index='0']//android.widget.TextView[@text='1st Week']",
+            "week_2": "//android.view.ViewGroup[@index='1']//android.widget.TextView[@text='2nd Week']",
+            "week_3": "//android.view.ViewGroup[@index='2']//android.widget.TextView[@text='3rd Week']",
+            "week_4": "//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='4th Week']",
+            "week_5": "//android.view.ViewGroup[@index='4']//android.widget.TextView[@text='5th Week']",
+
+            "user": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=2]",
+
+            "search": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=1]",
+
+            "next": "//android.view.ViewGroup[@index='0']//androidx.viewpager.widget.ViewPager[@index='1']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=2]",
+            "prev": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=0]",
+            "calendar_select": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=1]",
+            "select_date": "//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='Select']",
+
+            "view_detail": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']/android.view.ViewGroup[@index='4']//android.widget.TextView[@text='View detail']",
+            "date": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']/android.widget.TextView[@index=0]",
+            "": "",
+            "": ""
         },
 
         "timeline":{
