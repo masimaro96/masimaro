@@ -270,7 +270,9 @@
         },
 
         "timeline":{
-            "timeline_CT": "//android.view.ViewGroup[@index='6']//android.widget.TextView[@text='Time Line']"
+            "timeline_CT": "//android.view.ViewGroup[@index='6']//android.widget.TextView[@text='Time Line']",
+            "": "",
+            "": ""
         },
 
         "report":{

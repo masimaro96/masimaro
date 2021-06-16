@@ -17,6 +17,7 @@ from selenium.webdriver.common.alert import Alert
 dc = {
     "deviceName": "4458f4df58c6a32c",
     "platformName": "Android",
+    "app": "E:\\Quynh\\Selenium\\Appium-Python\\HR-app\\app-hanbiro-release.apk",
     "automationName": "UiAutomator2",
     "autoGrantPermissions": "true",
     "appWaitPackage": "com.hanbiro.hanbirohrm",
@@ -25,6 +26,7 @@ dc = {
     "language": "en"
 }
 
+with open("E:\\Quynh\\hr-app\\config-10.json") as json_data_file:
     data = json.load(json_data_file)
 
 n = random.randint(1,3000)
