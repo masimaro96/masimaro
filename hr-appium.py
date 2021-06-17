@@ -26,7 +26,7 @@ dc = {
     "language": "en"
 }
 
-with open("E:\\Quynh\\hr-app\\config-10.json") as json_data_file:
+with open("config-10.json") as json_data_file:
     data = json.load(json_data_file)
 
 n = random.randint(1,3000)
@@ -1186,12 +1186,73 @@ def timecard():
     time.sleep(5)
 
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["sort_timeline"]))).click()
+    print("- Sort time line")
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["tardin"]))).click()
+    print("- Tardines")
+    time.sleep(5)
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["sort_timeline"]))).click()
+    print("- Sort time line")
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["clockout"]))).click()
+    print("- Clock out")
+    time.sleep(5)
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["sort_timeline"]))).click()
+    print("- Sort time line")
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["auto_clockout"]))).click()
+    print("- Automatically Clock-out")
+    time.sleep(5)
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["sort_timeline"]))).click()
+    print("- Sort time line")
     time.sleep(5)
     driver.swipe(start_x=291, start_y=1315, end_x=291, end_y=691, duration=800)
     time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["outside"]))).click()
+    print("- Outside")
+    time.sleep(5)
 
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["sort_timeline"]))).click()
+    time.sleep(5)
+    driver.swipe(start_x=291, start_y=1315, end_x=291, end_y=691, duration=800)
+    time.sleep(5)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["meeting"]))).click()
     print("- Meeting")
+    time.sleep(5)
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["sort_timeline"]))).click()
+    time.sleep(5)
+    driver.swipe(start_x=291, start_y=1315, end_x=291, end_y=691, duration=800)
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["edu"]))).click()
+    print("- Education")
+    time.sleep(5)
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["sort_timeline"]))).click()
+    time.sleep(5)
+    driver.swipe(start_x=291, start_y=1315, end_x=291, end_y=691, duration=800)
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["business"]))).click()
+    print("- Business Trip")
+    time.sleep(5)
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["sort_timeline"]))).click()
+    time.sleep(5)
+    driver.swipe(start_x=291, start_y=1315, end_x=291, end_y=691, duration=800)
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["working_remote"]))).click()
+    print("- Working remote")
+    time.sleep(5)
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["sort_timeline"]))).click()
+    time.sleep(5)
+    driver.swipe(start_x=291, start_y=1315, end_x=291, end_y=691, duration=800)
+    driver.swipe(start_x=291, start_y=1315, end_x=291, end_y=691, duration=800)
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["working"]))).click()
+    print("- Working")
+    time.sleep(5)
+
 
 
 

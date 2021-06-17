@@ -279,7 +279,7 @@
             "tardin": "//android.view.ViewGroup[@index='2']//android.widget.TextView[@text='Tardiness']",
             "clockout": "//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Clock-Out']",
             "auto_clockout": "//android.view.ViewGroup[@index='4']//android.widget.TextView[@text='Automatically Clock-out']",
-            "outside": "//android.view.ViewGroup[@index='5']//android.widget.TextView[@text='Outside']",
+            "outside": "//android.view.ViewGroup[@index='0']//android.widget.TextView[@text='Outside']",
             "meeting": "//android.view.ViewGroup[@index='1']//android.widget.TextView[@text='Meeting']",
             "edu": "//android.view.ViewGroup[@index='2']//android.widget.TextView[@text='Education']",
             "business": "//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Business Trip']",
