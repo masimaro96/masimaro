@@ -57,13 +57,13 @@ def execution():
             ''' * Check crash app done
             => Execute function '''
             # clock_in_GPS()
-            # settings()
+            # break_time()
+            # clock_out_GPS()
             # viewNoti()
             # add_event()
             timecard()
             # admin()
-            # break_time()
-            # clock_out_GPS()
+            # settings()
             # vacation()
             # approve_request()
         else:
@@ -171,6 +171,7 @@ def clock_in_GPS():
             print("- Select branch")
             WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["close_popup"]))).click()
             print("- Close popup")
+            time.sleep(5)
         except WebDriverException:
             print("=> IN - OUT not display")   
 
@@ -659,8 +660,7 @@ def clock_out_GPS():
                     print("- Clock out early")
                     WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'Please input a reason to apply OT')]"))).send_keys(data["clock_in"]["text"])
                     print("- Input reason")
-                    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'Save')]")))
-                    driver.find_element_by_xpath(data["clock_in"]["save_button"]).click()
+                    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, ["clock_out"]["save"])))
                     print("=> Save")
                 else:
                     print("=> Clock out on time")
@@ -1253,6 +1253,8 @@ def timecard():
     print("- Working")
     time.sleep(5)
 
+    
+
 
 
 
@@ -1790,6 +1792,3 @@ execution()
 
 # m = driver.page_source
 # print(m)
-
-
-
