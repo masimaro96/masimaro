@@ -660,7 +660,7 @@ def clock_out_GPS():
                     print("- Clock out early")
                     WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'Please input a reason to apply OT')]"))).send_keys(data["clock_in"]["text"])
                     print("- Input reason")
-                    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, ["clock_out"]["save"])))
+                    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_out"]["save"]))).click()
                     print("=> Save")
                 else:
                     print("=> Clock out on time")
@@ -1179,6 +1179,39 @@ def timecard():
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["timeline_CT"]))).click()
     time.sleep(5)
 
+    ''' Search user '''
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["search"]))).click()
+    WebDriverWait(driver, 100).until(EC.presence_of_element_located((By.XPATH, "//*[@text='Please insert keyword to search']"))).click()
+    
+    ''' Send key "quynh" from keyboard mobile '''
+    driver.is_keyboard_shown()
+    driver.press_keycode(45)
+    driver.press_keycode(49)
+    driver.press_keycode(53)
+    driver.press_keycode(42)
+    driver.press_keycode(36)
+    driver.press_keycode(66)
+
+    WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'quynh1')]"))).click()
+    print("- Select user")
+    time.sleep(5)
+
+    ''' Next - Prev - Select date '''
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["next"]))).click()
+    print("- View next date")
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["prev"]))).click()
+    print("- View preview date")
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["calendar_select"]))).click()
+    print("- Select calendar")
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//android.view.ViewGroup[@index='1']//android.widget.Button[@index=19]"))).click()
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["select_date"]))).click()
+    print("- Select date")
+    time.sleep(10)
+
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["sort_timeline"]))).click()
     print("- Sort time line")
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["timeline"]["clockin"]))).click()
@@ -1253,8 +1286,58 @@ def timecard():
     print("- Working")
     time.sleep(5)
 
-    
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,data["event"]["timecard"]))).click()
 
+    print(" ")
+    print("** Check Company timecard - Report")
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["report_CT"]))).click()
+    print("- View by work")
+    time.sleep(5)
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["search"]))).click()
+    print("- Search user")
+
+    ''' Send key "quynh" from keyboard mobile '''
+    driver.is_keyboard_shown()
+    driver.press_keycode(45)
+    driver.press_keycode(49)
+    driver.press_keycode(53)
+    driver.press_keycode(42)
+    driver.press_keycode(36)
+    driver.press_keycode(66)
+    time.sleep(3)
+    WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'quynh1')]"))).click()
+    print("- Select user")
+    time.sleep(5)
+
+    ''' Next - Prev - Select date '''
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["next"]))).click()
+    print("- View next date")
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["prev"]))).click()
+    print("- View preview date")
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["calendar_select"]))).click()
+    print("- Select calendar")
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//android.view.ViewGroup[@index='1']//android.widget.Button[@index=19]"))).click()
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["select_date"]))).click()
+    print("- Select date")
+    time.sleep(10)
+    
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["detail"]))).click()
+    print("- View detail")
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["back"]))).click()
+    time.sleep(5)
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["view_by_event"]))).click()
+    print("- View by event")
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["detail"]))).click()
+    print("- View detail")
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["report"]["back"]))).click()
+    time.sleep(5)
 
 
 

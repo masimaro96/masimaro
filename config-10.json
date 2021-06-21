@@ -289,15 +289,52 @@
             "business": "//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Business Trip']",
             "working_remote": "//android.view.ViewGroup[@index='4']//android.widget.TextView[@text='Working remotely']",
             "working": "//android.view.ViewGroup[@index='5']//android.widget.TextView[@text='Working']",
+
+            "search": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='1']//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='1']//android.widget.TextView[@index=0]",
+            "next": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=2]",
+            "prev": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=0]",
+            "calendar_select": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']/android.widget.TextView[@index=0]",
+            "select_date": "//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='Select']",
+            
             "": ""
         },
 
         "report":{
-            "report_CT": "//android.view.ViewGroup[@index='7']//android.widget.TextView[@text='Report']"
+            "report_CT": "//android.view.ViewGroup[@index='7']//android.widget.TextView[@text='Report']",
+
+            "search": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='2']/android.widget.TextView[@index=0]",
+            "next": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=2]",
+            "prev": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=0]",
+            "calendar_select": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']/android.widget.TextView[@index=0]",
+            "select_date": "//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='Select']",
+            
+            "detail": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='2']/android.widget.TextView[@text='View detail']",
+            "back": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='0']/android.widget.ImageView[@index=0]",
+            
+            "view_by_event": "//android.widget.HorizontalScrollView[@index='0']//android.widget.TextView[@text='View By Event']",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": ""
         },
 
         "approval":{
-            "approval_CT": "//android.view.ViewGroup[@index='8']//android.widget.TextView[@text='Approval']"
+            "approval_CT": "//android.view.ViewGroup[@index='8']//android.widget.TextView[@text='Approval']",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": ""
         }
 
     },
