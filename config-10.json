@@ -249,6 +249,8 @@
 
         "weekly_status":{
             "weekly_status_CT": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='5']//android.widget.TextView[@text='Weekly Status']",
+            "week_title": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Weekly Status']",
+
             "sort_week": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.widget.TextView[@index=0]",
             "list": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index=0]",
 
@@ -267,7 +269,7 @@
             "prev": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=0]",
             "calendar_select": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']/android.widget.TextView[@index=0]",
             "select_date": "//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='Select']",
-            "date_calendar": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='0']//android.widget.TextView[@text='Select Date']/android.view.ViewGroup[@index='1']/android.widget.TextView[@index=0]",
+            "date_calendar": "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.TextView[1]",
             
             "view_detail": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']/android.view.ViewGroup[@index='4']//android.widget.TextView[@text='View detail']",
             "date": "//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']/android.widget.TextView[@index=0]",
@@ -277,6 +279,7 @@
 
         "timeline":{
             "timeline_CT": "//android.view.ViewGroup[@index='6']//android.widget.TextView[@text='Time Line']",
+            "timeline_title": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Time Line']",
             "sort_timeline": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='1']//android.widget.ScrollView[@index='0']//android.widget.TextView[@index=0]",
             
             "clockin": "//android.view.ViewGroup[@index='1']//android.widget.TextView[@text='Clock-In']",
@@ -301,9 +304,10 @@
 
         "report":{
             "report_CT": "//android.view.ViewGroup[@index='7']//android.widget.TextView[@text='Report']",
+            "report_title": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Report']",
 
-            "search": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='2']/android.widget.TextView[@index=0]",
-            "next": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=2]",
+            "search": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=2]",
+            "next": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index=2]",
             "prev": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=0]",
             "calendar_select": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']/android.widget.TextView[@index=0]",
             "select_date": "//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='Select']",
@@ -312,24 +316,39 @@
             "back": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='0']/android.widget.ImageView[@index=0]",
             
             "view_by_event": "//android.widget.HorizontalScrollView[@index='0']//android.widget.TextView[@text='View By Event']",
-            "": "",
-            "": "",
-            "": "",
-            "": "",
-            "": "",
-            "": "",
-            "": "",
+    
             "": ""
         },
 
         "approval":{
             "approval_CT": "//android.view.ViewGroup[@index='8']//android.widget.TextView[@text='Approval']",
-            "": "",
-            "": "",
-            "": "",
-            "": "",
-            "": "",
-            "": "",
+            "approval_title": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Approval']",
+
+            "select_user": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=2]",
+            "filter_type": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=3]",
+            
+            "type": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=1]",
+            "event": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='Event']",
+            "clockin_out": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='2']/android.widget.TextView[@text='Clock in/out']",
+            "workplan": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='3']/android.widget.TextView[@text='Work Plan']",
+            "overtime": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='1']//android.view.ViewGroup[@index='4']/android.widget.TextView[@text='Over Time']",           
+            
+            "status": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=3]",
+            "pending": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=3]//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='Pending']",
+            "approved": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=3]//android.view.ViewGroup[@index='2']/android.widget.TextView[@text='Approved']",
+            "reject": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=3]//android.view.ViewGroup[@index='3']/android.widget.TextView[@text='Rejected']",
+            "cancel": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=3]//android.view.ViewGroup[@index='4']/android.widget.TextView[@text='Cancelled']",
+            "expired": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=3]//android.view.ViewGroup[@index='5']/android.widget.TextView[@text='Expired']",
+            "auto_reject": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=3]//android.view.ViewGroup[@index='6']/android.widget.TextView[@text='Auto Rejected']",
+            "progressing": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=3]//android.view.ViewGroup[@index='7']/android.widget.TextView[@text='Progressing']",
+
+            "peroid": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=5]",
+            "today": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=5]//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='Today']",
+            "this_week": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=5]//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='This Week']",
+            "this_month": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=5]//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='This Month']",
+            "display_time": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='1']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index=5]//android.view.ViewGroup[@index='1']/android.widget.TextView[@text='Duration display time']",
+
+            "back": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='0']/android.widget.ImageView[@index=0]",
             "": "",
             "": "",
             "": "",
