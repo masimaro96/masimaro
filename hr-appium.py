@@ -17,7 +17,7 @@ from selenium.webdriver.common.alert import Alert
 dc = {
     "deviceName": "4458f4df58c6a32c",
     "platformName": "Android",
-    "app": "E:\\Quynh\\Selenium\\Appium-Python\\HR-app\\app-hanbiro-release.apk",
+    "app": "D:\\Quynh\\Hanbiro\\report_NQuynh\\HR-app\\app-hanbiro-release.apk",
     "automationName": "UiAutomator2",
     "autoGrantPermissions": "true",
     "appWaitPackage": "com.hanbiro.hanbirohrm",
@@ -1411,16 +1411,52 @@ def timecard():
     WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["pending"]))).click()
     time.sleep(5)
 
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["peroid"]))).click()
+    '''WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["peroid"]))).click()
     print("- Select peroid")
     time.sleep(5)
     WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["today"]))).click()
-    time.sleep(5)
+    time.sleep(5)'''
 
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["back"]))).click()
+    time.sleep(5)
 
+    ''' Approve '''
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["select"]))).click()
+    try:
+        approve_line = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["approval_line"])))
+        if approve_line.is_displayed():
+            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["approve"]))).click()
+            time.sleep(5)
+            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["close"]))).click()
+            time.sleep(5)
+            status_approve = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["status_text"])))
+            if status_approve.text == 'Approved':
+                print("- Approve success")
+            else:
+                print("- Fail")
+        else:
+            print("=> Approve don't have approve permission")
+    except WebDriverException:
+        print("=> Approve don't have approve permission")
 
-
+    ''' Reject '''
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["select"]))).click()
+    try:
+        approve_line = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["approval_line"])))
+        if approve_line.is_displayed():
+            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["reject_bt"]))).click()
+            time.sleep(5)
+            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["close"]))).click()
+            time.sleep(5)
+            status_reject = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["status_text"])))
+            if status_reject.text == 'Rejected':
+                print("- Rejected success")
+            else:
+                print("- Fail")
+        else:
+            print("=> Approve don't have approve permission")
+    except WebDriverException:
+        print("=> Approve don't have approve permission")
 
 
 def vacation():
