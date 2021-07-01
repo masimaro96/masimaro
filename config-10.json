@@ -34,7 +34,8 @@
         "preview": "//android.widget.ScrollView[@index='0']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='5']//android.view.ViewGroup[@index='0']//android.widget.TextView[@index=0]",
         "next": "//android.widget.ScrollView[@index='0']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='5']//android.view.ViewGroup[@index='2']//android.widget.TextView[@index=0]",
         "calendar": "//android.widget.ScrollView[@index='0']/android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='5']//android.view.ViewGroup[@index='1']//android.widget.TextView[@index=0]",
-        "select": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index='1']//android.widget.TextView[@text='Select']"
+        "select": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='2']//android.view.ViewGroup[@index='1']//android.widget.TextView[@text='Select']",
+        "warning": "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.TextView[@text='Please select worked day']"
     },
 
     "OT":{
@@ -139,6 +140,7 @@
     "event":{
         "timecard": "//android.view.ViewGroup[@index='1']//android.widget.Button[@index='1']//android.widget.TextView[@text='Timecard']",
         "timesheet": "//android.view.ViewGroup[@index='1']//android.widget.TextView[@text='Timesheet']",
+        "title_timesheet": "//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='2']//android.widget.TextView[@text='Timesheet']",
         "add": "//android.view.ViewGroup[@index='3']//android.view.ViewGroup[@index='2']//android.widget.TextView[@index=0]",
         "title": "//android.view.ViewGroup[@index='0']//android.widget.TextView[@text='Add event']",
         "input_title": "//*[contains(@text,'Please input data.')]",

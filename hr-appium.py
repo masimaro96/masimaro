@@ -56,12 +56,12 @@ def execution():
 
             ''' * Check crash app done
             => Execute function '''
-            # clock_in_GPS()
-            # break_time()
-            # clock_out_GPS()
+            clock_in_GPS()
+            break_time()
+            clock_out_GPS()
             # viewNoti()
-            add_event()
-            timecard()
+            # add_event()
+            # timecard()
             # admin()
             # settings()
             # vacation()
@@ -173,7 +173,26 @@ def clock_in_GPS():
             print("- Close popup")
             time.sleep(5)
         except WebDriverException:
-            print("=> IN - OUT not display")   
+            print("=> IN - OUT not display")
+            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'Wifi')]"))).click()
+            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'GPS')]"))).click() 
+            print("- Change to wifi -> GPS") 
+            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["IN"]))).click()
+            print("- Select IN on map")
+            time.sleep(5)
+            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["select_branch"]))).click()
+            print("- Select branch")
+            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["close_popup"]))).click()
+            print("- Close popup")
+            time.sleep(5)
+            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["IN"]))).click()
+            print("- Select OUT on map")
+            time.sleep(5)
+            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["select_branch"]))).click()
+            print("- Select branch")
+            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["close_popup"]))).click()
+            print("- Close popup")
+        time.sleep(5)
 
         WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["preview"]))).click()
         print("- View preview date")
@@ -182,10 +201,9 @@ def clock_in_GPS():
         print("- View next date")
         time.sleep(5)
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["calendar"]))).click()
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//android.view.ViewGroup[@index='1']//android.widget.Button[@index=16]"))).click()
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//android.view.ViewGroup[@index='0']//android.view.ViewGroup[@index='3']//android.widget.ScrollView[@index='0']//android.view.ViewGroup[@index='1']//android.widget.Button[@index=3]"))).click()
         print("- Select date")
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["clock_in"]["select"]))).click()
-
     except WebDriverException:
         print("=> Crash app")
         exit(0)
@@ -377,22 +395,24 @@ def add_event():
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["timecard"]))).click()
     print("- Select time card")
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["timesheet"]))).click()
-    print("- Select time sheet")
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["add"]))).click()
-    print("- Select add")
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'Please input data.')]"))).send_keys(data["event"]["title_text"])
-    print("- Input title")
-    time.sleep(5)
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["choose_event"]))).click()
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["type_event"]))).click()
-    print("- Choose event")
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["select_color"]))).click()
-    print("- Select color")
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'Please input data.')]"))).send_keys(data["event"]["location_text"])
-    print("- Input location")
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'Please add a memo.')]"))).send_keys(data["event"]["memo_text"])
-    print("- Input memo")
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["button_save"]))).click()
+    title = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["title_timesheet"])))
+    if title.text == 'Timesheet':
+        print("- Select time sheet")
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["add"]))).click()
+        print("- Select add")
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'Please input data.')]"))).send_keys(data["event"]["title_text"])
+        print("- Input title")
+        time.sleep(5)
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["choose_event"]))).click()
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["type_event"]))).click()
+        print("- Choose event")
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["select_color"]))).click()
+        print("- Select color")
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'Please input data.')]"))).send_keys(data["event"]["location_text"])
+        print("- Input location")
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'Please add a memo.')]"))).send_keys(data["event"]["memo_text"])
+        print("- Input memo")
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["button_save"]))).click()
 
     print("** Check event use approval type")
     try:
@@ -655,7 +675,7 @@ def clock_out_GPS():
                 print("=> Click clock out")
                 time.sleep(2)
                 ''' Check clock out time '''
-                popup = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_out"]["popup"])))
+                popup = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_out"]["status"])))
                 if popup.text == 'Leave Early':
                     print("- Clock out early")
                     WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//*[contains(@text,'Please input a reason to apply OT')]"))).send_keys(data["clock_in"]["text"])
@@ -686,7 +706,7 @@ def clock_out_Wifi():
                 print("=> Click clock out")
                 time.sleep(2)
                 ''' Check clock out time '''
-                popup = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_out"]["popup"])))
+                popup = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_out"]["status"])))
                 if popup.text == 'Leave Early':
                     print("- Clock out early")
                     WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_out"]["input_text"]))).send_keys(data["clock_in"]["text"])
@@ -717,7 +737,7 @@ def clock_out_Beacon():
                 print("=> Click clock out")
                 time.sleep(2)
                 ''' Check clock out time '''
-                popup = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_out"]["popup"])))
+                popup = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_out"]["status"])))
                 if popup.text == 'Leave Early':
                     print("- Clock out early")
                     WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["clock_out"]["input_text"]))).send_keys(data["clock_in"]["text"])
@@ -808,8 +828,7 @@ def settings():
         print("=> Change to language 'English' success")
     else:
         print("=> Fail")
-
-    
+ 
 '''
 - Check crash app of timecard
 => when click to menu but don't display data, it'll show result crash app
@@ -1489,7 +1508,11 @@ def timecard():
         print("=> Approve don't have approve permission")
 
     ''' Reject '''
-    '''WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["select"]))).click()
+    add_event()
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["event"]["timecard"]))).click()
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["approval_CT"]))).click()
+    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["select"]))).click()
     try:
         approve_line = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, data["TimeCard"]["approval"]["approval_line"])))
         if approve_line.is_displayed():
@@ -1505,7 +1528,7 @@ def timecard():
         else:
             print("=> Approve don't have approve permission")
     except WebDriverException:
-        print("=> Approve don't have approve permission")'''
+        print("=> Approve don't have approve permission")
 
 
 def vacation():
