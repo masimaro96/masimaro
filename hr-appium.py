@@ -56,14 +56,15 @@ def execution():
 
             ''' * Check crash app done
             => Execute function '''
-            clock_in_GPS()
-            break_time()
-            clock_out_GPS()
+            # clock_in_GPS()
+            # break_time()
+            # clock_out_GPS()
             # viewNoti()
             # add_event()
             # timecard()
             # admin()
             # settings()
+            access_vacation()
             # vacation()
             # approve_request()
         else:
@@ -1530,19 +1531,74 @@ def timecard():
     except WebDriverException:
         print("=> Approve don't have approve permission")
 
-
-def vacation():
+def access_vacation():
     WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["vacation"]["button_vacation"]))).click()
     print("- Vacation")
-    ''' Request vaction'''
     WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["vacation"]["my_vacation"]["request"]))).click() 
-    
+    print(" ")
+
     title_request = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["vacation"]["my_vacation"]["request_vacation_text"])))
     if title_request.text == 'Request vacation':
-        print("=> Request vacation")
+        print("- Request vacation")
     else:
         print("=> Crash app")
-        exit(0)   
+        exit(0)
+
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["request_vacation"]["vacation_information"]))).click()
+    
+    title_page_infor = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["request_vacation"]["vacation_information_text"])))
+    if title_page_infor.text == 'Vacation information':
+        print("- View detail vacation information")
+    else:
+        print("=> Crash app")
+        exit(0)
+    
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["request_vacation"]["back"]))).click()
+
+    # vacation()
+
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["vacation"]["button_vacation"]))).click()
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["my_vacation_status"]["vacation_status"]))).click()
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["my_vacation_status"]["sort_status"]))).click()
+    print("- Request status: Sort")
+    time.sleep(5)
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["my_vacation_status"]["sort_request"]))).click()
+    print("- Request")
+
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["my_vacation_status"]["sort_status"]))).click()
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["my_vacation_status"]["sort_processing"]))).click()
+    print("- Processing")
+
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["my_vacation_status"]["sort_status"]))).click()
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["my_vacation_status"]["sort_complete"]))).click()
+    print("- Completed")
+    time.sleep(5)
+
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["my_vacation_status"]["vacation_information"]))).click()
+    time.sleep(5)
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["my_vacation_status"]["sort_vacation"]))).click()
+    print("- Vacation_information: Sort")
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["my_vacation_status"]["sort_vacation_other"]))).click()
+    print("- Sort: Other")
+
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["my_vacation_status"]["filter"]))).click()
+    print("- Filter")
+    
+
+
+
+def vacation():
+    # WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["vacation"]["button_vacation"]))).click()
+    # print("- Vacation")
+    ''' Request vaction'''
+    # WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["vacation"]["my_vacation"]["request"]))).click() 
+    
+    # title_request = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["vacation"]["my_vacation"]["request_vacation_text"])))
+    # if title_request.text == 'Request vacation':
+    #     print("=> Request vacation")
+    # else:
+    #     print("=> Crash app")
+    #     exit(0)   
     WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["vacation"]["my_vacation"]["AM"]))).click()  
     print("- Select vacation type")
 
