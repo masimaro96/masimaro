@@ -1563,6 +1563,7 @@ def access_vacation():
     print("- Request status: Sort")
     time.sleep(5)
     WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["my_vacation_status"]["sort_request"]))).click()
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["request_vacation"]["back"]))).click()
     print("- Request")
 
     WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, data["access_pages_vacation"]["my_vacation_status"]["sort_status"]))).click()
